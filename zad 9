@@ -1,0 +1,13 @@
+import numpy as np 
+
+def matrixmethod():
+    a= np.matrix('4,1,4; 1,1,2; 2,1,2')
+    b= np.matrix('-2; -1; 0')
+    a= np.linalg.inv(a)
+    c= a*b
+
+    print(c)
+    print('Solve: ', np.linalg.solve(np.linalg.inv(a), b))
+    return c
+
+matrixmethod()
